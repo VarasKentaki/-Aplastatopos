@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atrapa el topo</title>
+    <script src="./css/tailwindcss.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <div class="container mx-auto mt-1 mb-5 pb-5 bg-green-600">     
+        <header id="header" class="bg-orange-50 p-3 font-bold">
+            Examen - ATRAPA EL TOPO
+        </header>
+
+
+        <main class="max-w-lg mx-auto">
+<!-- 
+            TAREA 1: 
+                Haz que se dibuje de forma aleatoria el topo en un agujero cada 2 segundos
+-->
+
+                <div class="grid grid-cols-4 gap-5 mt-5" id="tablero">
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">1</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">2</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">3</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">4</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">5</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">6</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">7</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">8</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">9</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">10</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">11</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">12</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">13</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">14</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">15</div>
+                        <div class="agujero rounded-full bg-amber-700 border-2 border-stone-900 w-25 h-24 text-center text-neutral-100 text-xl">16</div>
+                </div>
+
+<!-- 
+            TAREA 2: 
+                Haz que cada vez que se pulsen las teclas que se corresponden con el numero del agujero donde esta el topo se incremete en 1 el button id="topos" y la imagen del topo del agujero debe desaparecer
+                por ejemplo, después de acertar tres veces el botón id="topos" mostrará Topos: 3                
+-->
+                <div class="flex justify-center mb-10 mt-10">
+                    <button id="topos" class="w-48 bg-lime-200 opacity-90 mr-5 uppercase font-bold px-2 py-3" 
+                        type="button">Topos: 0</button>
+                 </div>
+<!-- 
+            TAREA 3: 
+                Haz que cada vez que se pulsen las teclas del agujero donde esta el topo se ponga el document background de color rojo durante 20 ms
+                A continuación debe volver a su color blanco
+-->
+
+
+<!-- 
+            TAREA 4: 
+                Haz que el input id="segundos" empiece en 30 y cada segundo se descuente 1, cuando llegue a 0 haza que el juego termine:
+                - Ya no saldrán más topos y el usuario ya no podrá seguir jugando
+                - El button id="topos" pondrá "¡Atrapaste X topos!" donde X es el número de agujeros con topos acertados 
+                - El input id="segundos" pondrá "El tiempo ha terminado"
+-->
+
+
+<!-- 
+            TAREA 5: 
+                Haz que hasta que el usuario no pulse en el button id="partida" no comience el juego.
+                Cada vez que el usuario pulse el button id="partida" debe comenzar un nuevo juego.
+                Todo debe funcionar correctamente.
+-->
+
+                <div class="flex flex-col">
+                    <p class="max-w-lg mx-auto">
+                        <span class="text-neutral-100 text-xl">Tiempo: </span><input type="text" readonly name="segundos" id="segundos" class="text-xl bg-gray-100 border-2 border-lime-900 shadow p-3" value="30"></input>
+                    </p>
+                    <p class="flex justify-center mb-10 mt-10">
+                        <button id="partida" class="w-1/2 bg-blue-600 mx-3 px-2 py-3 text-white items-center opacity-90 mr-5 uppercase font-bold" 
+                       type="button">Nueva Partida!!
+                        </button>
+                    </p>
+                </div>
+ 
+   
+  </body>
+  <script src="./js/app.js"></script>
+</html>
